@@ -1,0 +1,42 @@
+body {
+	width: 33%;
+}
+
+button {
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#calc-result {
+	display: flex;
+	background-color: lightgray;
+	border: solid;
+	height: 48px;
+	font-size: 20px;
+	padding: 0 10px;
+	align-items: center;
+}
+
+#btn-grid button {
+	width: 25%;
+	height: 36px;
+	font-size: 18px;
+	margin: 0;
+	float: left;
+}
+
+.buttons-number {
+	background-color: lightgreen;
+	color: brown;
+}
+
+.buttons-calc {
+	background-color: darkgreen;
+	color: white;
+}
+
+.buttons-op {
+	background-color: black;
+	color: red;
+}
