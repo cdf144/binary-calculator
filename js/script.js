@@ -71,13 +71,19 @@ function calculate() {
   if (parseExpression() === false) {
     return;
   }
-  calculateMulDiv();
-  calculateAddSub();
+  try {
+    calculateMulDiv();
+    calculateAddSub();
+  } catch (e) {
+    alert(e.message);
+    return;
+  }
   updateResultText(nums[0].toString(2));
 }
 
 function calculateMulDiv() {
-  const nums_stack = [], ops_stack = [];
+  const nums_stack = [];
+  const ops_stack = [];
 
   for (let i = 0; i < nums.length; i++) {
     nums_stack.push(nums[i]);
@@ -94,7 +100,11 @@ function calculateMulDiv() {
           nums_stack.push(a * b);
           break;
         case "/":
+          if (b === 0) {
+            throw new Error("Warning: division by zero");
+          }
           nums_stack.push(Math.round(a / b));
+          break;
       }
     }
   }
