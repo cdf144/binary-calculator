@@ -9,7 +9,6 @@ let ops = [];
 
 /**
  * Parse the expression and store the numbers and operators in separate arrays
- * @returns {void}
  * @throws {Error} If the expression is invalid (contains redundant operators)
  */
 function parseExpression() {
@@ -25,7 +24,6 @@ function parseExpression() {
 
 /**
  * Calculate the result of the expression
- * @returns {void}
  */
 function calculate() {
   try {
@@ -42,10 +40,6 @@ function calculate() {
   updateResultText(nums[0].toString(2));
 }
 
-/**
- * Calculate the multiplication and division operations first
- * @returns {void}
- */
 function calculateMulDiv() {
   const nums_stack = [], ops_stack = [];
 
@@ -74,10 +68,6 @@ function calculateMulDiv() {
   ops = [...ops_stack].reverse();
 }
 
-/**
- * Calculate the addition and subtraction operations
- * @returns {void}
- */
 function calculateAddSub() {
   while (nums.length > 1) {
     const a = nums.shift();
