@@ -67,9 +67,6 @@ function updateFirstNumber(nums, ops) {
   nums[0] = Number(ops.shift() + nums[0]);
 }
 
-/**
- * Calculate the result of the expression
- */
 function calculate() {
   if (parseExpression() === false) {
     return;
@@ -82,7 +79,6 @@ function calculate() {
 function calculateMulDiv() {
   const nums_stack = [], ops_stack = [];
 
-  // Prioritize * and / operators
   for (let i = 0; i < nums.length; i++) {
     nums_stack.push(nums[i]);
     if (i > 0) {
