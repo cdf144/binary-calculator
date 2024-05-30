@@ -109,8 +109,8 @@ function calculateMulDiv() {
     }
   }
 
-  nums = [...nums_stack].reverse();
-  ops = [...ops_stack].reverse();
+  nums = [...nums_stack];
+  ops = [...ops_stack];
 }
 
 function calculateAddSub() {
